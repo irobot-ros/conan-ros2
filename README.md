@@ -43,6 +43,9 @@ This split allows to cross-compile only those packages that will need to be used
 ## Example Application
 
 The `example-application` directory contains a basic C++ application that consumes the ROS 2 Conan recipes.
+It can be built using standard Conan and CMake commands.
 
 The ``example-application/conanfile.py` defines the list of Conan dependencies of the application.
+Note that the application is not built as part of the Conan recipe `build` step (which is not present): this allows to better appreciate the use of vanilla CMake.
 
+The `build-example.sh` script can be used to run all the commands required to generate the Conan dependencies, build the application and then finally run it.

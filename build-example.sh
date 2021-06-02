@@ -6,9 +6,9 @@ REPO_DIR=~/conan-ros2
 
 CONAN_DIR=$REPO_DIR/conan
 
-#conan create $CONAN_DIR/ros2-virtualenvgen/all ros2-virtualenvgen/0.0.1@example/stable
-#conan create $CONAN_DIR/ros2-base/all ros2-base/0.0.1@example/stable
-#conan create $CONAN_DIR/ros2-core/all ros2-core/foxy@example/stable
+conan create $CONAN_DIR/ros2-virtualenvgen/all ros2-virtualenvgen/0.0.1@example/stable
+conan create $CONAN_DIR/ros2-base/all ros2-base/0.0.1@example/stable
+conan create $CONAN_DIR/ros2-core/all ros2-core/foxy@example/stable
 conan create $CONAN_DIR/ros2-tf/all ros2-tf/foxy@example/stable
 
 ### Build ExampleApplicaton
