@@ -52,3 +52,15 @@ The `example-application/conanfile.py` defines the list of Conan dependencies of
 Note that the application is not built as part of the Conan recipe `build` step (which is not present): this allows to better appreciate the use of vanilla CMake.
 
 The `build-example.sh` script can be used to run all the commands required to generate the Conan dependencies, build the application and then finally run it.
+
+```sh
+bash build-example.sh
+```
+
+The script will generate an executable `example-application/_install/example_app`.
+Note that in order to run this application, you first need to source the Conan virtual environment.
+
+```sh
+source example-application/_build/conan/activate_ros2.sh
+./example-application/_install/example_app
+```
