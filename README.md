@@ -35,6 +35,9 @@ Then we have two additional recipes that serve as an example of how the base rec
  - `ros2-core` this recipe contains all the core ROS 2 libraries required by C++ applications.
  - `ros2-tf` this recipe contains the ROS 2 TF library C++ implementation.
 
+The `sources` directory contains repos files used by these recipes to fetch all their components.
+This is used as an example to show how this approach could directly fetch repositories from the standard url https://github.com/ros2/ros2/blob/foxy/ros2.repos.
+
 Note that the content of these two recipes has been arbirarily chosen for the sake of this example.
 It is both possible to agglomerate all ROS 2 dependencies within a single ROS 2 recipe as well as have a more fine-grained organization.
 As an additional example, it is possible to have a recipe for ROS 2 build tools (e.g. ament), one for the ROS 2 core libraries, one for additional RMW implementations and a last one for desktop tools.
@@ -45,7 +48,7 @@ This split allows to cross-compile only those packages that will need to be used
 The `example-application` directory contains a basic C++ application that consumes the ROS 2 Conan recipes.
 It can be built using standard Conan and CMake commands.
 
-The ``example-application/conanfile.py` defines the list of Conan dependencies of the application.
+The `example-application/conanfile.py` defines the list of Conan dependencies of the application.
 Note that the application is not built as part of the Conan recipe `build` step (which is not present): this allows to better appreciate the use of vanilla CMake.
 
 The `build-example.sh` script can be used to run all the commands required to generate the Conan dependencies, build the application and then finally run it.
