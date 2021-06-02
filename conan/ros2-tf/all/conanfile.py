@@ -1,5 +1,13 @@
+# Software License Agreement (BSD License)
+#
+#  Copyright (c) 2021, iRobot ROS
+#  All rights reserved.
+#
+#  This file is part of conan-ros2, which is released under BSD-3-Clause.
+#  You may use, distribute and modify this code under the BSD-3-Clause license.
+#
+
 import os
-import shutil
 from conans import ConanFile, load, tools
 
 class Ros2TFConan(ConanFile):
