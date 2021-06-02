@@ -51,10 +51,6 @@ repositories:
     type: git
     url: https://github.com/ros2/console_bridge_vendor.git
     version: 3ac8d2b1c47eec485ffc931c279ea97a1889a606
-  ros2/geometry2:
-    type: git
-    url: https://github.com/ros2/geometry2.git
-    version: 99d87c508ba16743837910381775849110ffe52f
   ros2/launch:
     type: git
     url: https://github.com/ros2/launch.git
@@ -131,6 +127,14 @@ repositories:
     type: git
     url: https://github.com/ros2/rosidl_typesupport_fastrtps.git
     version: ff42b5948e7af6d9228854be550b07e868391bda
+  ros2/spdlog_vendor:
+    type: git
+    url: https://github.com/ros2/spdlog_vendor.git
+    version: 7894716efaa2a7ddf5fd5addbd6eb5b5c647dcb2
+  ros2/test_interface_files:
+    type: git
+    url: https://github.com/ros2/test_interface_files.git
+    version: 124823291a0a7d35e983b2e00abc8803ec4cdbb2
   ros2/tinyxml2_vendor:
     type: git
     url: https://github.com/ros2/tinyxml2_vendor.git

@@ -1,16 +1,16 @@
 import os
 import shutil
-import sys
 from conans import ConanFile, load, tools
 
-class Ros2Conan(ConanFile):
-    name = "ros2"
+class Ros2CoreConan(ConanFile):
+    name = "ros2-core"
     license = "Apache 2.0"
     url = "https://index.ros.org/doc/ros2/"
     homepage = "https://index.ros.org/doc/ros2/"
     description = "ROS 2 core libraries"
     settings = "os", "compiler", "build_type", "arch"
 
+    exports = ["ignore_list"]
     generators = "cmake_find_package"
 
     python_requires = "ros2-base/0.0.1@example/stable"
@@ -22,6 +22,7 @@ class Ros2Conan(ConanFile):
         self.options = base.options
 
     def requirements(self):
+        self.requires("spdlog/1.8.5")
         self.requires("tinyxml2/8.0.0")
 
     def source(self):
@@ -39,6 +40,13 @@ class Ros2Conan(ConanFile):
     def build(self):
 
         workspace_path = os.path.join(self.build_folder, self._workspace_dir)
+
+        # Optional: ignore version-specific packages.
+        colcon_ignore_file = "ignore_list"
+        if os.path.isfile(colcon_ignore_file):
+            content = load(colcon_ignore_file)
+            files_list = content.splitlines()
+            self._colcon_ignore_packages(workspace_path, files_list)
 
         # Replace the ROS FindTinyXML2 file with the conan one
         # TODO: figure out if there is a better way to do this:

@@ -32,4 +32,5 @@ RUN apt-get update && apt-get install -y \
     python3-vcstool
 
 RUN pip3 install -U \
-    conan
+    conan \
+    lark-parser

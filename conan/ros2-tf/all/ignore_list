@@ -1,0 +1,10 @@
+src/ros2/geometry2/examples_tf2_py/COLCON_IGNORE
+src/ros2/geometry2/test_tf2/COLCON_IGNORE
+src/ros2/geometry2/tf2_bullet/COLCON_IGNORE
+src/ros2/geometry2/tf2_eigen/COLCON_IGNORE
+src/ros2/geometry2/tf2_eigen_kdl/COLCON_IGNORE
+src/ros2/geometry2/tf2_kdl/COLCON_IGNORE
+src/ros2/geometry2/tf2_geometry_msgs/COLCON_IGNORE
+src/ros2/geometry2/tf2_py/COLCON_IGNORE
+src/ros2/geometry2/tf2_sensor_msgs/COLCON_IGNORE
+src/ros2/geometry2/tf2_tools/COLCON_IGNORE

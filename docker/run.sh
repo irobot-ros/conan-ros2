@@ -1,6 +1,10 @@
+#!/bin/bash
+
+THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
 docker run -it --rm \
 	  --net=host \
 	  --privileged \
-	  -v $PWD:/root/ros2-conan \
-	  ros2_conan_example \
+	  -v $THIS_DIR/../:/root/conan-ros2 \
+	  conan_ros2_example \
 	  bash
