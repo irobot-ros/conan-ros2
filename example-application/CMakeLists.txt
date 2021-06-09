@@ -7,9 +7,6 @@ if(NOT CMAKE_CXX_STANDARD)
     set(CMAKE_CXX_STANDARD 14)
 endif()
 
-# Include the output of the 'cmake' conan generator.
-include(/root/conan-ros2/example-application/_build/conan/conanbuildinfo.cmake)
-
 find_package(rclcpp REQUIRED)
 find_package(tf2_ros REQUIRED)
 

@@ -64,3 +64,19 @@ Note that in order to run this application, you first need to source the Conan v
 source example-application/_build/conan/activate_ros2.sh
 ./example-application/_install/example_app
 ```
+
+#### Using Conan CMake
+
+Note that the `build-example.sh` script invokes the `conan install` command on the `example-application/conanfile.py` in order to grab conan dependencies.
+This could be replaced by using the Conan Cmake logic, for example:
+
+```
+include (conan)
+conan_cmake_run(
+    CONANFILE conanfile.py
+    INSTALL_FOLDER ${CONAN_FIND_PACKAGE_DIR}
+    SETTINGS compiler.libcxx=libstdc++
+    SETTINGS arch=${CMAKE_SYSTEM_PROCESSOR}
+    BUILD_TYPE Release
+)
+```
